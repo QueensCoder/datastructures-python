@@ -27,13 +27,21 @@ class Binary_Tree:
         curr = self.value   
         if curr == val:
             print('found it',val, True)
+            
         else:
             if val < curr and self.left:
-                self.left.find_val(val)
+                 self.left.find_val(val)
+                
+            elif val >= curr and self.right:
+                 self.right.find_val(val)
+                
             else:
-                print('cannot find val', False, val)
-            
-            
+                print('cannotfind val', False, val)
+                
+    # find largest node val that is smaller than key inserted
+    def largest_smaller_key(key):
+        if not self.right and not self.left:
+            return self.value
         
 
 
@@ -45,7 +53,9 @@ tree.insert(2)
 tree.insert(1)
 tree.insert(4)
 tree.insert(5)
+tree.insert(100)
 tree.find_val(20)
 tree.find_val(2)
 tree.find_val(5)
 tree.find_val(100)
+tree.find_val(12)
