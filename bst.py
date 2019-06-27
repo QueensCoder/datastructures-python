@@ -40,8 +40,11 @@ class Binary_Tree:
                 
     # find largest node val that is smaller than key inserted
     def largest_smaller_key(key):
+        curr = self.value
         if not self.right and not self.left:
-            return self.value
+            return curr
+        
+        elif curr 
         
 
 
